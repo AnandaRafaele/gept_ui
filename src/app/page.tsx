@@ -11,7 +11,7 @@ export default function Home() {
       <p className="text-secondary mt-6 max-w-lg text-center text-4xl leading-snug md:max-w-full">
         The library for web and native user interfaces
       </p>
-      <Button>
+      <Button className="mt-10">
         <Link href="/componentes">Começar</Link>
         <ArrowRight className="ml-1" />
       </Button>

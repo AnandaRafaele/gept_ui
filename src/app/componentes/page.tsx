@@ -1,6 +1,6 @@
 import Button from '@/components/Button'
 import { Input } from '@/components/Inputs'
-import { Lock, Mail, User } from 'lucide-react'
+import { LoaderIcon, Lock, Mail, Search, User } from 'lucide-react'
 
 const Componentes: React.FC = () => {
   return (
@@ -14,16 +14,25 @@ const Componentes: React.FC = () => {
         <h3 className="text-xl">Buttons</h3>
         <div className="flex justify-center gap-2 rounded border border-green-300 p-4">
           <Button>Entrar</Button>
-          <Button className="disabled bg-zinc-300 text-zinc-500 hover:bg-zinc-300 cursor-not-allowed">
-            Disabled
+          <Button mod="DISABLED">Disabled</Button>
+          <Button mod="OUTLINE">Outlined</Button>
+          <Button icon={Search} size="18px" />
+          <Button icon={Search} mod="OUTLINE" size="18px" />
+          <Button icon={Search} mod="DISABLED" size="18px" />
+          <Button icon={Search} size="18px">
+            Começar
           </Button>
+          <Button icon={Search} mod="OUTLINE" size="18px">
+            Começar
+          </Button>
+          <Button />
         </div>
       </div>
 
       {/* INPUTS */}
       <div>
         <h3 className="text-xl">Inputs</h3>
-        <div className="flex justify-center gap-2 rounded border border-green-300 p-4">
+        <div className="flex w-full flex-wrap justify-center gap-2 rounded border border-green-300 p-4">
           <Input.Root>
             <Input.Icon icon={Lock} />
             <Input.Password placeholder="Digite sua senha..." />
@@ -39,6 +48,11 @@ const Componentes: React.FC = () => {
           </Input.Root>
 
           <Input.Root>
+            <Input.Email placeholder="Digite seu email..." />
+          </Input.Root>
+
+          <Input.Root>
+            <Input.Label label="Email" />
             <Input.Email placeholder="Digite seu email..." />
           </Input.Root>
         </div>

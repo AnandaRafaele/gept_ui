@@ -1,5 +1,6 @@
 import { InputEmail } from './InputEmail'
 import { InputIcon } from './InputIcon'
+import { InputLabel } from './InputLabel'
 import { InputPassword } from './InputPassword'
 import { InputRoot } from './InputRoot'
 import { InputSearch } from './InputSearch'
@@ -12,4 +13,5 @@ export const Input = {
   Text: InputText,
   Search: InputSearch,
   Email: InputEmail,
+  Label: InputLabel,
 }
